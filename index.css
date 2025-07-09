@@ -25,6 +25,37 @@ body.dragging * {
   justify-content: center;
   padding: 20px;
   gap: 20px;
+  position: relative;
+}
+
+/* Vertical side labels */
+.side-label {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 6vw, 80px);
+  color: #00ff64;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  user-select: none;
+  pointer-events: none;
+  text-shadow: 0 0 20px rgba(0, 255, 100, 0.6);
+  z-index: 10;
+  opacity: 0.9;
+}
+
+.side-label.left {
+  left: clamp(40px, 8vw, 120px);
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: center;
+}
+
+.side-label.right {
+  right: clamp(40px, 8vw, 120px);
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: center;
 }
 
 /* Video section - upper half with fixed aspect ratio */
@@ -122,5 +153,18 @@ body.dragging * {
   #midi-section {
     width: 95vw;
     height: min(45vh, 500px);
+  }
+  
+  .side-label {
+    font-size: clamp(24px, 4.5vw, 60px);
+    letter-spacing: 3px;
+  }
+  
+  .side-label.left {
+    left: clamp(20px, 5vw, 80px);
+  }
+  
+  .side-label.right {
+    right: clamp(20px, 5vw, 80px);
   }
 }

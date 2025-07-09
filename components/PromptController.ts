@@ -73,7 +73,7 @@ export class PromptController extends LitElement {
       outline: none;
       -webkit-font-smoothing: antialiased;
       background: #000;
-      color: #fff;
+      color: #00ff64;
       &:not(:focus) {
         text-overflow: ellipsis;
       }

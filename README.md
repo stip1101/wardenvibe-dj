@@ -121,21 +121,21 @@ npm run preview
 ## 🎵 **Available Genres**
 
 - 🌊 **Bossa Nova** - Smooth Brazilian vibes
-- 🌀 **WardenWave** - Dreamy electronic atmospheres  
+- 🌀 **Chillwave** - Dreamy electronic atmospheres  
 - 🥁 **Drum and Bass** - High-energy rhythms
-- 🎸 **SPEX Punk** - Edgy alternative sounds
-- 👠 **AIgaze** - Ethereal guitar walls
-- 🕺 **AgentFunk** - Groovy bass lines
-- 🎹 **WARDtune** - Retro 8-bit melodies
+- 🎸 **Post Punk** - Edgy alternative sounds
+- 👠 **Shoegaze** - Ethereal guitar walls
+- 🕺 **Funk** - Groovy bass lines
+- 🎹 **Chiptune** - Retro 8-bit melodies
 - 🎻 **Lush Strings** - Orchestral beauty
-- ✨ **Spaceward Arpeggios** - Cascading melodies
-- 🎵 **Co-Pilot Rhythms** - Sharp, precise beats
-- 👊 **Punchy ward** - Powerful low-end
+- ✨ **Sparkling Arpeggios** - Cascading melodies
+- 🎵 **Staccato Rhythms** - Sharp, precise beats
+- 👊 **Punchy Kick** - Powerful low-end
 - 🎛️ **Dubstep** - Heavy electronic drops
 - 🎤 **K Pop** - Korean pop vibes
-- 🎶 **Warden Soul** - Modern soulful rhythms
+- 🎶 **Neo Soul** - Modern soulful rhythms
 - 🌙 **Trip Hop** - Downtempo atmospheric beats
-- ⚡ **HardWard** - Aggressive metal energy
+- ⚡ **Thrash** - Aggressive metal energy
 
 ---
 
