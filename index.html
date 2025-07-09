@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^1.0.0",
+          "lit/": "https://esm.sh/lit@^3.3.0/",
+          "lit": "https://esm.sh/lit@^3.3.0"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app-container">
+      <div id="video-section">
+        <video autoplay muted loop playsinline id="background-video">
+          <source src="/background.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div id="midi-section">
+        <script type="module" src="/index.tsx"></script>
+      </div>
+    </div>
+  </body>
+</html>
