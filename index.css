@@ -2,11 +2,16 @@ html, body {
   height: 100%;
   margin: 0;
 }
+:root {
+  --ui-scale: 1;
+}
 body {
   font-family: 'Google Sans', sans-serif;
   font-size: 14px;
   overflow: hidden;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  transform: scale(var(--ui-scale));
+  transform-origin: top center;
 }
 body.dragging {
   cursor: ns-resize;
@@ -31,8 +36,8 @@ body.dragging * {
 /* Vertical side labels */
 .side-label {
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 20px;
+  transform: none;
   font-family: 'Arial', 'Helvetica', sans-serif;
   font-weight: 900;
   font-size: clamp(36px, 6vw, 80px);
@@ -42,20 +47,20 @@ body.dragging * {
   user-select: none;
   pointer-events: none;
   text-shadow: 0 0 20px rgba(0, 255, 100, 0.6);
-  z-index: 10;
+  z-index: 0;
   opacity: 0.9;
 }
 
 .side-label.left {
-  left: clamp(40px, 8vw, 120px);
-  transform: translateY(-50%) rotate(-90deg);
-  transform-origin: center;
+  left: calc(50% - (min(75vw, 800px) / 2) - 110px);
+  transform: translate(-100%, 0) rotate(-90deg);
+  transform-origin: top right;
 }
 
 .side-label.right {
-  right: clamp(40px, 8vw, 120px);
-  transform: translateY(-50%) rotate(90deg);
-  transform-origin: center;
+  right: calc(50% - (min(75vw, 800px) / 2) - 110px);
+  transform: translate(100%, 0) rotate(90deg);
+  transform-origin: top left;
 }
 
 /* Video section - upper half with fixed aspect ratio */
@@ -70,6 +75,7 @@ body.dragging * {
     0 2px 8px rgba(0, 0, 0, 0.3),
     inset 0 0 0 1px rgba(0, 255, 100, 0.1);
   background: #000;
+  z-index: 2;
 }
 
 #background-video {
@@ -109,7 +115,7 @@ body.dragging * {
 /* MIDI section - lower half matching video width */
 #midi-section {
   width: min(75vw, 800px);
-  height: min(40vh, 400px);
+  height: min(45vh, 450px);
   position: relative;
   background: linear-gradient(145deg, #0a0a0a 0%, #1a1a1a 30%, #0f1f0f 70%, #0a0a0a 100%);
   border-radius: 6px;
@@ -120,6 +126,7 @@ body.dragging * {
     inset 0 0 0 1px rgba(0, 255, 100, 0.15),
     inset 0 1px 0 rgba(0, 255, 100, 0.1);
   border-top: 2px solid rgba(0, 255, 100, 0.2);
+  z-index: 2;
 }
 
 /* DJ Console effect */
@@ -152,7 +159,7 @@ body.dragging * {
   
   #midi-section {
     width: 95vw;
-    height: min(45vh, 500px);
+    height: min(55vh, 600px);
   }
   
   .side-label {

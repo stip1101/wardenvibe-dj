@@ -148,4 +148,16 @@ const DEFAULT_PROMPTS = [
   { color: '#d9b2ff', text: 'Thrash' },
 ];
 
+// Global responsive scaling
+const BASE_WIDTH = 1600;
+const BASE_HEIGHT = 900;
+
+function applyScale() {
+  const scale = Math.min(window.innerWidth / BASE_WIDTH, window.innerHeight / BASE_HEIGHT, 1);
+  document.documentElement.style.setProperty('--ui-scale', scale.toString());
+}
+
+window.addEventListener('resize', applyScale);
+applyScale();
+
 main();
