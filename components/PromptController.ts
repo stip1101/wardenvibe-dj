@@ -39,18 +39,19 @@ export class PromptController extends LitElement {
       font-family: monospace;
       text-align: center;
       font-size: 1.5vmin;
-      border: 0.2vmin solid #fff;
+      border: 0.2vmin solid rgba(0, 255, 100, 0.3);
       border-radius: 0.5vmin;
       padding: 2px 5px;
-      color: #fff;
+      color: #00ff64;
       background: #0006;
       cursor: pointer;
       visibility: hidden;
       user-select: none;
       margin-top: 0.75vmin;
       .learn-mode & {
-        color: orange;
-        border-color: orange;
+        color: #00ff64;
+        border-color: rgba(0, 255, 100, 0.8);
+        box-shadow: 0 0 8px rgba(0, 255, 100, 0.4);
       }
       .show-cc & {
         visibility: visible;

@@ -34,6 +34,27 @@ function main() {
   const audioAnalyser = new AudioAnalyser(liveMusicHelper.audioContext);
   liveMusicHelper.extraDestination = audioAnalyser.node;
 
+  // Video management
+  const backgroundVideo = document.getElementById('background-video') as HTMLVideoElement;
+  let isVideoShowing = false;
+
+  function showVideo() {
+    if (!isVideoShowing && backgroundVideo) {
+      backgroundVideo.classList.add('visible');
+      backgroundVideo.currentTime = 0;
+      backgroundVideo.play();
+      isVideoShowing = true;
+    }
+  }
+
+  function hideVideo() {
+    if (isVideoShowing && backgroundVideo) {
+      backgroundVideo.classList.remove('visible');
+      backgroundVideo.pause();
+      isVideoShowing = false;
+    }
+  }
+
   pdjMidi.addEventListener('prompts-changed', ((e: Event) => {
     const customEvent = e as CustomEvent<Map<string, Prompt>>;
     const prompts = customEvent.detail;
@@ -48,7 +69,16 @@ function main() {
     const customEvent = e as CustomEvent<PlaybackState>;
     const playbackState = customEvent.detail;
     pdjMidi.playbackState = playbackState;
-    playbackState === 'playing' ? audioAnalyser.start() : audioAnalyser.stop();
+    
+    if (playbackState === 'playing') {
+      audioAnalyser.start();
+      showVideo();
+    } else {
+      audioAnalyser.stop();
+      if (playbackState === 'stopped') {
+        hideVideo();
+      }
+    }
   }));
 
   liveMusicHelper.addEventListener('filtered-prompt', ((e: Event) => {
@@ -76,10 +106,10 @@ function main() {
 }
 
 function buildInitialPrompts() {
-  // Pick 3 random prompts to start at weight = 1
-  const startOn = [...DEFAULT_PROMPTS]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 3);
+  // Always start with only WardenWave
+  const startOn = DEFAULT_PROMPTS.filter(prompt => 
+    prompt.text === 'WardenWave'
+  );
 
   const prompts = new Map<string, Prompt>();
 
@@ -101,21 +131,21 @@ function buildInitialPrompts() {
 
 const DEFAULT_PROMPTS = [
   { color: '#9900ff', text: 'Bossa Nova' },
-  { color: '#5200ff', text: 'Chillwave' },
+  { color: '#5200ff', text: 'WardenWave' },
   { color: '#ff25f6', text: 'Drum and Bass' },
-  { color: '#2af6de', text: 'Post Punk' },
-  { color: '#ffdd28', text: 'Shoegaze' },
-  { color: '#2af6de', text: 'Funk' },
-  { color: '#9900ff', text: 'Chiptune' },
+  { color: '#2af6de', text: 'SPEX Punk' },
+  { color: '#ffdd28', text: 'AIgaze' },
+  { color: '#2af6de', text: 'AgentFunk' },
+  { color: '#9900ff', text: 'WARDtune' },
   { color: '#3dffab', text: 'Lush Strings' },
-  { color: '#d8ff3e', text: 'Sparkling Arpeggios' },
-  { color: '#d9b2ff', text: 'Staccato Rhythms' },
-  { color: '#3dffab', text: 'Punchy Kick' },
+  { color: '#d8ff3e', text: 'Spaceward Arpeggios' },
+  { color: '#d9b2ff', text: 'Co-Pilot Rhythms' },
+  { color: '#3dffab', text: 'Punchy ward' },
   { color: '#ffdd28', text: 'Dubstep' },
   { color: '#ff25f6', text: 'K Pop' },
-  { color: '#d8ff3e', text: 'Neo Soul' },
+  { color: '#d8ff3e', text: 'Warden Soul' },
   { color: '#5200ff', text: 'Trip Hop' },
-  { color: '#d9b2ff', text: 'Thrash' },
+  { color: '#d9b2ff', text: 'HardWard' },
 ];
 
 main();

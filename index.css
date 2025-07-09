@@ -49,6 +49,12 @@ body.dragging * {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+#background-video.visible {
+  opacity: 1;
 }
 
 /* Video overlay for "dance floor" effect */

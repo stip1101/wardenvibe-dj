@@ -25,6 +25,19 @@ export class WeightKnob extends LitElement {
       flex-shrink: 0;
       touch-action: none;
     }
+    
+    :host(.active) {
+      animation: greenPulse 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes greenPulse {
+      0%, 100% {
+        filter: drop-shadow(0 0 8px rgba(0, 255, 100, 0.4));
+      }
+      50% {
+        filter: drop-shadow(0 0 16px rgba(0, 255, 100, 0.8));
+      }
+    }
     svg {
       position: absolute;
       top: 0;
@@ -43,6 +56,19 @@ export class WeightKnob extends LitElement {
       mix-blend-mode: lighten;
       transform: scale(2);
       will-change: transform;
+    }
+    
+    :host(.active) #halo {
+      animation: haloPulse 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes haloPulse {
+      0%, 100% {
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 0.6;
+      }
     }
   `;
 
@@ -124,9 +150,16 @@ export class WeightKnob extends LitElement {
 
     const haloStyle = styleMap({
       display: this.value > 0 ? 'block' : 'none',
-      background: this.color,
-      transform: `scale(${scale})`,
+      background: 'rgba(0, 255, 100, 0.2)',
+      transform: `scale(${scale * 0.7})`,
     });
+
+    // Add active class for pulsing effect
+    if (this.value > 0) {
+      this.classList.add('active');
+    } else {
+      this.classList.remove('active');
+    }
 
     return html`
       <div id="halo" style=${haloStyle}></div>

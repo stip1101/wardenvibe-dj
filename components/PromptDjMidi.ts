@@ -62,8 +62,20 @@ export class PromptDjMidi extends LitElement {
     play-pause-button {
       position: relative;
       width: clamp(45px, 7vmin, 60px);
-      margin-top: 8px;
+      margin-top: -25px;
       z-index: 2;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 10px rgba(0, 255, 100, 0.3));
+      }
+      50% {
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 25px rgba(0, 255, 100, 0.8));
+      }
     }
     #buttons {
       position: absolute;
@@ -155,7 +167,7 @@ export class PromptDjMidi extends LitElement {
       }
       play-pause-button {
         width: clamp(30px, 4vmin, 45px);
-        margin-top: 4px;
+        margin-top: -20px;
       }
     }
   `;
@@ -207,28 +219,8 @@ export class PromptDjMidi extends LitElement {
   /** Generates radial gradients for each prompt based on weight and color. */
   private readonly makeBackground = throttle(
     () => {
-      const clamp01 = (v: number) => Math.min(Math.max(v, 0), 1);
-
-      const MAX_WEIGHT = 0.5;
-      const MAX_ALPHA = 0.6;
-
-      const bg: string[] = [];
-
-      [...this.prompts.values()].forEach((p, i) => {
-        const alphaPct = clamp01(p.weight / MAX_WEIGHT) * MAX_ALPHA;
-        const alpha = Math.round(alphaPct * 0xff)
-          .toString(16)
-          .padStart(2, '0');
-
-        const stop = p.weight / 2;
-        const x = (i % 4) / 3;
-        const y = Math.floor(i / 4) / 3;
-        const s = `radial-gradient(circle at ${x * 100}% ${y * 100}%, ${p.color}${alpha} 0px, ${p.color}00 ${stop * 100}%)`;
-
-        bg.push(s);
-      });
-
-      return bg.join(', ');
+      // Return empty background to remove colored gradients
+      return '';
     },
     30, // don't re-render more than once every XXms
   );

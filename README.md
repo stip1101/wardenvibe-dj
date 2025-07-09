@@ -44,7 +44,7 @@ Transform your space into a dynamic music haven with AI-powered beats, MIDI cont
 🎛️ **Real-time Music Generation** - Create beats on the fly with AI assistance  
 🎹 **MIDI Controller Support** - Connect your hardware for professional control  
 🎨 **Visual Experience** - Immersive video backgrounds and dynamic lighting  
-🎵 **Genre Mixing** - Blend Bossa Nova, Chillwave, Drum & Bass, and more  
+🎵 **Genre Mixing** - Blend Bossa Nova, WardenWave, Drum & Bass, and more  
 ⚡ **Live Performance** - Perfect for DJs, producers, and music enthusiasts  
 🎪 **Customizable Atmosphere** - Tailor your club's vibe to your mood  
 
@@ -121,17 +121,21 @@ npm run preview
 ## 🎵 **Available Genres**
 
 - 🌊 **Bossa Nova** - Smooth Brazilian vibes
-- 🌀 **Chillwave** - Dreamy electronic atmospheres  
+- 🌀 **WardenWave** - Dreamy electronic atmospheres  
 - 🥁 **Drum and Bass** - High-energy rhythms
-- 🎸 **Post Punk** - Edgy alternative sounds
-- 👠 **Shoegaze** - Ethereal guitar walls
-- 🕺 **Funk** - Groovy bass lines
-- 🎹 **Chiptune** - Retro 8-bit melodies
+- 🎸 **SPEX Punk** - Edgy alternative sounds
+- 👠 **AIgaze** - Ethereal guitar walls
+- 🕺 **AgentFunk** - Groovy bass lines
+- 🎹 **WARDtune** - Retro 8-bit melodies
 - 🎻 **Lush Strings** - Orchestral beauty
-- ✨ **Sparkling Arpeggios** - Cascading melodies
-- 🎵 **Staccato Rhythms** - Sharp, precise beats
-- 👊 **Punchy Kick** - Powerful low-end
+- ✨ **Spaceward Arpeggios** - Cascading melodies
+- 🎵 **Co-Pilot Rhythms** - Sharp, precise beats
+- 👊 **Punchy ward** - Powerful low-end
 - 🎛️ **Dubstep** - Heavy electronic drops
+- 🎤 **K Pop** - Korean pop vibes
+- 🎶 **Warden Soul** - Modern soulful rhythms
+- 🌙 **Trip Hop** - Downtempo atmospheric beats
+- ⚡ **HardWard** - Aggressive metal energy
 
 ---
 
