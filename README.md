@@ -120,11 +120,11 @@ npm run preview
 
 ## 🎵 **Available Genres**
 
-- 🌊 **Bossa Nova** - Smooth Brazilian vibes
+- 🌈 **Synthwave** - Neon-soaked retro electronic vibes
 - 🌀 **Chillwave** - Dreamy electronic atmospheres  
 - 🥁 **Drum and Bass** - High-energy rhythms
 - 🎸 **Post Punk** - Edgy alternative sounds
-- 👠 **Shoegaze** - Ethereal guitar walls
+- 🤖 **Techno** - Driving electronic beats
 - 🕺 **Funk** - Groovy bass lines
 - 🎹 **Chiptune** - Retro 8-bit melodies
 - 🎻 **Lush Strings** - Orchestral beauty
@@ -132,10 +132,10 @@ npm run preview
 - 🎵 **Staccato Rhythms** - Sharp, precise beats
 - 👊 **Punchy Kick** - Powerful low-end
 - 🎛️ **Dubstep** - Heavy electronic drops
-- 🎤 **K Pop** - Korean pop vibes
+- 🌆 **Retrowave** - 80s cyberpunk nostalgia
 - 🎶 **Neo Soul** - Modern soulful rhythms
 - 🌙 **Trip Hop** - Downtempo atmospheric beats
-- ⚡ **Thrash** - Aggressive metal energy
+- 🌌 **Ambient** - Atmospheric soundscapes
 
 ---
 

@@ -130,11 +130,11 @@ function buildInitialPrompts() {
 }
 
 const DEFAULT_PROMPTS = [
-  { color: '#9900ff', text: 'Bossa Nova' },
+  { color: '#9900ff', text: 'Synthwave' },
   { color: '#5200ff', text: 'Chillwave' },
   { color: '#ff25f6', text: 'Drum and Bass' },
   { color: '#2af6de', text: 'Post Punk' },
-  { color: '#ffdd28', text: 'Shoegaze' },
+  { color: '#ffdd28', text: 'techno' },
   { color: '#2af6de', text: 'Funk' },
   { color: '#9900ff', text: 'Chiptune' },
   { color: '#3dffab', text: 'Lush Strings' },
@@ -142,10 +142,10 @@ const DEFAULT_PROMPTS = [
   { color: '#d9b2ff', text: 'Staccato Rhythms' },
   { color: '#3dffab', text: 'Punchy Kick' },
   { color: '#ffdd28', text: 'Dubstep' },
-  { color: '#ff25f6', text: 'K Pop' },
+  { color: '#ff25f6', text: 'Retrowave' },
   { color: '#d8ff3e', text: 'Neo Soul' },
   { color: '#5200ff', text: 'Trip Hop' },
-  { color: '#d9b2ff', text: 'Thrash' },
+  { color: '#d9b2ff', text: 'Ambient' },
 ];
 
 // Global responsive scaling
